@@ -134,10 +134,10 @@ public class Client extends JFrame implements ActionListener {
 			}
 		}
 		else if(e.getSource()==menuItem[1]) {
-			
+			SelectRGB rgbDia = new SelectRGB(chatArea);
 		}
 		else if(e.getSource()==menuItem[2]) {
-			
+			SelectFont fontDlg = new SelectFont(userLabel);
 		}
 		else if(e.getSource()==menuItem[3]) {
 			

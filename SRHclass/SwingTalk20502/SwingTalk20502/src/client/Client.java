@@ -19,6 +19,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 
+import server.ServerReceiver;
+
 public class Client extends JFrame implements ActionListener {
 	
 	String userID;
@@ -52,6 +54,10 @@ public class Client extends JFrame implements ActionListener {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
+		
+		Listener listener = new Listener(userID, chatArea, chatScroll);
+		Thread thread = new Thread(listener);
+		thread.start();
 		
 	}
 
